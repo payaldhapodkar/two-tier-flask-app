@@ -99,8 +99,12 @@ docker run -d \
     -e MYSQL_DATABASE=mydb \
     -e MYSQL_USER=root \
     -e MYSQL_ROOT_PASSWORD=admin \
+    -e MYSQL_PASSWORD=admin \
     -p 3306:3306 \
     mysql:5.7
+
+OR
+docker run -d -p 3306:3306 --name mysql --network=twotier -e  MYSQL_DATABASE=mydb    -e MYSQL_USER=admin  -e MYSQL_PASSWORD=admin     -e MYSQL_ROOT_PASSWORD=admin  mysql:5.7
 
 ```
 ii) Backend container
