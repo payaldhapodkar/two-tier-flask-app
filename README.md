@@ -97,7 +97,7 @@ docker run -d \
     -v mysql-data:/var/lib/mysql \
     --network=twotier \
     -e MYSQL_DATABASE=mydb \
-    -e MYSQL_USER=root \
+    -e MYSQL_USER=root \      
     -e MYSQL_ROOT_PASSWORD=admin \
     -e MYSQL_PASSWORD=admin \
     -p 3306:3306 \
@@ -131,6 +131,7 @@ docker run -d \
 - Be cautious when executing SQL queries directly. Validate and sanitize user inputs to prevent vulnerabilities like SQL injection.
 
 - If you encounter issues, check Docker logs and error messages for troubleshooting.
+  
 
 ```
 
